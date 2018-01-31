@@ -31,10 +31,11 @@ services:
     #   - SYS_ADMIN
     privileged: true
     command: ["bash", "/tmp/start.sh"]
-    environment:
-      - ROOTPW=<ultra supuer secret>
-      - BUMP_AT_CONTAINER_AWAKENS=0
-      - AUTOFS_TIMEOUT=300
+    # uncomment to customize by environment vars.
+    # environment:
+    #   - ROOTPW=<ultra supuer secret>
+    #   - BUMP_AT_CONTAINER_AWAKENS=0
+    #   - AUTOFS_TIMEOUT=300
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 ```
