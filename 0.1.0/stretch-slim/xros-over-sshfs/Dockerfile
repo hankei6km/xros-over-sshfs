@@ -28,7 +28,7 @@ RUN apt-get update && apt-get upgrade -y \
                 supervisor
 
 # Install xrosfs and xros_over tools.
-RUN pip install --extra-index-url https://testpypi.python.org/pypi xrosfs
+RUN pip install xrosfs
 RUN pip install -e "git+https://github.com/hankei6km/xrosfs.git@master#egg=pkg&subdirectory=extra/xros_over"
 
 # Cleanup
